@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background : linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),url("../../static/images/img1.jpg"); 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-position: center;
+            background-size: cover
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #button{
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            background-color: #3498db; /* Change the background color as needed */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<form action="" method="post">{% csrf_token %}
+    <h2>Enter Student Details and Student Marks</h2>
+    <label for="studentname">Student Name:</label>
+    <input type="text" id="studentname" name="studentname" placeholder="enter student name" required/><br>
+    <label for="studenthallticketno">Student Hall Ticket No:</label>
+    <input type="text" id="studenthallticketno" name="studenthallticketno" placeholder="enter student hall ticket no" value="" maxlength="4" required/><br>
+
+    <label for="mlmarks">ML Marks:</label>
+    <input type="text" id="mlmarks" name="mlmarks" placeholder="enter ml marks" value="" maxlength="100" required/><br>
+    <label for="iotmarks">IOT Marks:</label>
+    <input type="number" id="iotmarks" name="iotmarks" placeholder="enter iot marks" min="0" max="100" required/><br>
+    <label for="webmarks">WEB Marks:</label>
+    <input type="number" id="webmarks" name="webmarks" placeholder="enter web marks" min="0" max="100" required/><br>
+    <label for="cnsmarks">CNS Marks:</label>
+    <input type="number" id="cnsmarks" name="cnsmarks" placeholder="enter cns marks" min="0" max="100" required/><br>
+    <label for="spmmarks">SPM Marks:</label>
+    <input type="number" id="spmmarks" name="spmmarks" placeholder="enter spm marks" min="0" max="100" required/><br>
+
+    <button type="submit" id="button">Submit</a></button>
+    <button type="logout" onclick="logout()" id="button"><a href="http://127.0.0.1:8000/" id="button">Logout</a></button>   
+</form>
+</body>
+</html>
